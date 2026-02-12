@@ -58,3 +58,5 @@ if st.button("Generate Report Draft", type="primary", disabled=generate_disabled
     report = resp.choices[0].message.content
     st.subheader("Report Draft")
     st.text_area("Output", value=report, height=360)
+    st.download_button("Download Report (.txt)", report, file_name="report.txt")
+
